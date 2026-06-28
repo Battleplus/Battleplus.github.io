@@ -17,8 +17,9 @@
           <a href="./" aria-label="Battleplus home">
             <img class="avatar" src="assets/avatar.png" alt="Battleplus avatar" />
           </a>
+          <p class="eyebrow">Personal Blog</p>
           <h1>Battleplus</h1>
-          <p>AI Agent / 量化分析 / 全栈工程</p>
+          <p class="bio">AI Agent / 量化分析 / 全栈工程</p>
         </div>
 
         <nav class="nav" aria-label="站点导航">
@@ -28,6 +29,11 @@
           <a href="https://github.com/Battleplus" target="_blank" rel="noreferrer">GitHub</a>
         </nav>
 
+        <div class="side-note">
+          <strong>Focus</strong>
+          <span>Build useful AI tools with clear data, readable interfaces, and verifiable results.</span>
+        </div>
+
         <div class="sidebar-footer">
           <button class="theme-toggle" type="button" aria-label="切换主题">夜间模式</button>
           <p>Copyright (c) 2026 Battleplus</p>
@@ -35,6 +41,14 @@
       </aside>
 
       <main class="content" id="home">
+        <section class="hero-note" aria-label="个人简介">
+          <p class="eyebrow">Hello, world</p>
+          <h2>记录 AI 产品、量化工具和工程实践。</h2>
+          <p>
+            这里是 Battleplus 的个人主页，用来整理公开项目、学习笔记和阶段性作品。页面参考轻博客结构，重点是让项目和思考一眼可读。
+          </p>
+        </section>
+
         <section class="search-container" aria-label="搜索项目">
           <input id="search-input" type="search" placeholder="search posts or projects..." autocomplete="off" />
           <ul id="results-container" aria-live="polite"></ul>
@@ -42,19 +56,21 @@
 
         <section class="posts" id="projects" aria-label="项目列表">
           <article class="post" data-title="QuantPilot 量化分析 Agent" data-tags="AI Agent Quant TypeScript Python">
+            <div class="post-topline">
+              <span class="date">2026-05-30</span>
+              <span class="post-type">Project</span>
+            </div>
             <h2>
               <a href="https://github.com/Battleplus/QuantPilot" target="_blank" rel="noreferrer">
                 QuantPilot：面向量化投研的 AI 工作台
               </a>
             </h2>
-            <div class="meta">
-              <span class="date">2026-05-30</span>
-              <ul class="tag">
-                <li><a href="#projects">AI Agent</a></li>
-                <li><a href="#projects">Quant</a></li>
-                <li><a href="#projects">TypeScript</a></li>
-              </ul>
-            </div>
+            <ul class="tag">
+              <li><a href="#projects">AI Agent</a></li>
+              <li><a href="#projects">Quant</a></li>
+              <li><a href="#projects">TypeScript</a></li>
+              <li><a href="#projects">Python</a></li>
+            </ul>
             <div class="entry">
               <p>
                 QuantPilot 是面向量化投研、金融数据分析和可视化看板生成的 AI 工作台。用户用自然语言发起分析任务，Agent 负责澄清、规划、取数、生成工作空间、执行验证，并沉淀可追踪的产物与评测记录。
@@ -66,19 +82,21 @@
           </article>
 
           <article class="post" data-title="Mamoji 记账软件" data-tags="Finance App TypeScript Java CSS">
+            <div class="post-topline">
+              <span class="date">2026-06-17</span>
+              <span class="post-type">Product</span>
+            </div>
             <h2>
               <a href="https://github.com/Battleplus/Mamoji" target="_blank" rel="noreferrer">
                 Mamoji：个人记账产品实践
               </a>
             </h2>
-            <div class="meta">
-              <span class="date">2026-06-17</span>
-              <ul class="tag">
-                <li><a href="#projects">Finance</a></li>
-                <li><a href="#projects">Product</a></li>
-                <li><a href="#projects">TypeScript</a></li>
-              </ul>
-            </div>
+            <ul class="tag">
+              <li><a href="#projects">Finance</a></li>
+              <li><a href="#projects">Product</a></li>
+              <li><a href="#projects">TypeScript</a></li>
+              <li><a href="#projects">Java</a></li>
+            </ul>
             <div class="entry">
               <p>
                 Mamoji 是记账软件项目，关注个人财务记录、账目管理与日常消费数据沉淀。它适合展示移动端产品理解、财务场景建模以及前后端协作实现。
@@ -90,16 +108,18 @@
           </article>
 
           <article class="post" id="about" data-title="关于 Battleplus" data-tags="About Full-stack AI Product">
+            <div class="post-topline">
+              <span class="date">2026-06-28</span>
+              <span class="post-type">About</span>
+            </div>
             <h2>
               <a href="#about">关于 Battleplus</a>
             </h2>
-            <div class="meta">
-              <span class="date">2026-06-28</span>
-              <ul class="tag">
-                <li><a href="#about">About</a></li>
-                <li><a href="#about">Full-stack</a></li>
-              </ul>
-            </div>
+            <ul class="tag">
+              <li><a href="#about">About</a></li>
+              <li><a href="#about">Full-stack</a></li>
+              <li><a href="#about">AI Product</a></li>
+            </ul>
             <div class="entry">
               <p>
                 我关注 AI 应用从想法到产品的完整链路：任务入口、模型运行时、数据接口、工程验证、可视化呈现和长期迭代。这个主页用于记录公开项目、技术文章和阶段性作品。
