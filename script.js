@@ -2,35 +2,41 @@ const root = document.documentElement;
 const themeButton = document.querySelector(".theme-toggle");
 const searchInput = document.querySelector("#search-input");
 const results = document.querySelector("#results-container");
-const posts = Array.from(document.querySelectorAll(".post"));
+const cards = Array.from(document.querySelectorAll(".project-card"));
 
 const savedTheme = localStorage.getItem("battleplus-theme");
 if (savedTheme) {
   root.dataset.theme = savedTheme;
-  themeButton.textContent = savedTheme === "dark" ? "日间模式" : "夜间模式";
 }
+
+function syncThemeButton() {
+  if (!themeButton) return;
+  themeButton.textContent = root.dataset.theme === "dark" ? "Light" : "Dark";
+}
+
+syncThemeButton();
 
 themeButton?.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
   root.dataset.theme = nextTheme;
   localStorage.setItem("battleplus-theme", nextTheme);
-  themeButton.textContent = nextTheme === "dark" ? "日间模式" : "夜间模式";
+  syncThemeButton();
 });
 
 function updateSearch(query) {
   const keyword = query.trim().toLowerCase();
   results.innerHTML = "";
 
-  posts.forEach((post) => {
-    const haystack = `${post.dataset.title || ""} ${post.dataset.tags || ""} ${post.textContent}`.toLowerCase();
+  cards.forEach((card) => {
+    const haystack = `${card.dataset.title || ""} ${card.dataset.tags || ""} ${card.textContent}`.toLowerCase();
     const matched = !keyword || haystack.includes(keyword);
-    post.classList.toggle("is-hidden", !matched);
+    card.classList.toggle("is-hidden", !matched);
 
     if (keyword && matched) {
-      const title = post.querySelector("h2")?.innerText || "Untitled";
-      const link = post.querySelector("h2 a")?.getAttribute("href") || "#";
+      const title = card.querySelector("h3")?.innerText || "Untitled";
+      const link = card.querySelector(".text-link")?.getAttribute("href") || "#";
       const item = document.createElement("li");
-      item.innerHTML = `<a href="${link}">${title}</a>`;
+      item.innerHTML = `<a href="${link}" target="_blank" rel="noreferrer">${title}</a>`;
       results.appendChild(item);
     }
   });
