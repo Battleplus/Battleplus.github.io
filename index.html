@@ -3,161 +3,237 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0a" />
     <meta
       name="description"
-      content="Battleplus 的个人主页，记录 RoutePilot、QuantPilot、Mamoji 等 AI 应用与全栈工程实践。"
+      content="Battleplus 的个人作品集：用 AI、数据与工程，把复杂决策变成清晰可用的产品。"
     />
-    <title>Battleplus's Blog</title>
+    <meta property="og:title" content="Battleplus — AI 产品与全栈工程" />
+    <meta
+      property="og:description"
+      content="RoutePilot、QuantPilot、Mamoji：旅行决策、量化研究与企业经营工具。"
+    />
+    <meta property="og:type" content="website" />
+    <title>Battleplus — AI 产品与全栈工程</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23c8ff38'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial' font-size='23' font-weight='700'%3EB%2B%3C/text%3E%3C/svg%3E" />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="site">
-      <aside class="sidebar">
-        <div class="profile">
-          <a href="./" aria-label="Battleplus home">
-            <img class="avatar" src="assets/avatar.png" alt="Battleplus avatar" />
-          </a>
-          <p class="eyebrow">Personal Blog</p>
-          <h1>Battleplus</h1>
-          <p class="bio">AI Agent / 旅行规划 / 量化分析 / 全栈工程</p>
-        </div>
+    <div class="grain" aria-hidden="true"></div>
 
-        <nav class="nav" aria-label="站点导航">
-          <a href="#home">首页</a>
-          <a href="#projects">项目</a>
-          <a href="#about">关于</a>
-          <a href="https://github.com/Battleplus" target="_blank" rel="noreferrer">GitHub</a>
-        </nav>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Battleplus 首页">
+        <span class="brand-mark">B+</span>
+        <span>Battleplus</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#projects">项目</a>
+        <a href="#approach">方法</a>
+        <a href="#about">关于</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="切换深浅主题">
+          <span aria-hidden="true">◐</span>
+          <span class="theme-label">浅色</span>
+        </button>
+        <a class="github-link" href="https://github.com/Battleplus" target="_blank" rel="noreferrer">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </header>
 
-        <div class="side-note">
-          <strong>Focus</strong>
-          <span>Build useful AI tools for travel planning, quant research, finance products, and clear decision workflows.</span>
-        </div>
-
-        <div class="sidebar-footer">
-          <button class="theme-toggle" type="button" aria-label="切换主题">夜间模式</button>
-          <p>Copyright (c) 2026 Battleplus</p>
-        </div>
-      </aside>
-
-      <main class="content" id="home">
-        <section class="hero-note" aria-label="个人简介">
-          <p class="eyebrow">Hello, world</p>
-          <h2>记录 AI 产品、决策工具和工程实践。</h2>
-          <p>
-            这里是 Battleplus 的个人主页，用来整理公开项目、学习笔记和阶段性作品。近期重点包括旅行规划 Agent、量化分析工作台和个人财务产品。
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="kicker"><span class="status-dot"></span> AI PRODUCT BUILDER · FULL-STACK ENGINEER</p>
+          <h1>把复杂决策，<br />做成<span class="accent-text">清晰的产品。</span></h1>
+          <p class="hero-intro">
+            我是 Battleplus。我关注 AI Agent、数据产品与全栈工程，正在构建旅行规划、量化研究和企业经营场景中的实用工具。
           </p>
-        </section>
-
-        <section class="search-container" aria-label="搜索项目">
-          <input id="search-input" type="search" placeholder="search posts or projects..." autocomplete="off" />
-          <ul id="results-container" aria-live="polite"></ul>
-        </section>
-
-        <section class="posts" id="projects" aria-label="项目列表">
-          <article class="post" data-title="RoutePilot 旅行规划 Agent AI 助手" data-tags="AI Agent Travel RoutePilot Next.js FastAPI LangGraph">
-            <div class="post-topline">
-              <span class="date">2026-06-29</span>
-              <span class="post-type">Latest</span>
-            </div>
-            <h2>
-              <a href="https://github.com/Battleplus/RoutePilot" target="_blank" rel="noreferrer">
-                RoutePilot：面向真实旅行决策的 AI 旅行助手
-              </a>
-            </h2>
-            <ul class="tag">
-              <li><a href="#projects">AI Agent</a></li>
-              <li><a href="#projects">Travel</a></li>
-              <li><a href="#projects">Next.js</a></li>
-              <li><a href="#projects">FastAPI</a></li>
-            </ul>
-            <div class="entry">
-              <p>
-                RoutePilot 聚焦旅行规划场景，把“提问、生成行程、预算调整、路线对比、冲突检测、导出分享”串成完整体验。它不是只给建议，而是把旅行决策整理成可继续编辑和比较的结构化方案。
-              </p>
-            </div>
-            <a class="read-more" href="https://github.com/Battleplus/RoutePilot" target="_blank" rel="noreferrer">
-              Read More
+          <div class="hero-cta">
+            <a class="button button-primary" href="#projects">查看项目 <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="https://github.com/Battleplus" target="_blank" rel="noreferrer">
+              访问 GitHub <span aria-hidden="true">↗</span>
             </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="项目方向概览">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="core-card">
+            <span class="core-label">CURRENT FOCUS</span>
+            <strong>AI × Data</strong>
+            <span>从任务理解到可信交付</span>
+          </div>
+          <span class="float-label label-travel">01 / TRAVEL</span>
+          <span class="float-label label-quant">02 / QUANT</span>
+          <span class="float-label label-ops">03 / BUSINESS OPS</span>
+        </div>
+
+        <div class="hero-meta reveal">
+          <div><span>3</span><small>完整产品项目</small></div>
+          <div><span>AI</span><small>Agent 驱动工作流</small></div>
+          <div><span>∞</span><small>持续构建与验证</small></div>
+        </div>
+      </section>
+
+      <section class="projects section-shell" id="projects">
+        <div class="section-heading reveal">
+          <div>
+            <p class="kicker">SELECTED WORK / 2026</p>
+            <h2>正在构建的产品</h2>
+          </div>
+          <p>三个项目，探索同一个问题：如何让复杂信息变得可理解、可操作、可验证。</p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card project-route reveal" data-search="RoutePilot 旅行规划 AI Agent POI UGC 路线 Next.js FastAPI LangGraph">
+            <div class="project-index">01</div>
+            <div class="project-main">
+              <div class="project-title-row">
+                <div>
+                  <p class="project-type">AI TRAVEL DECISION AGENT</p>
+                  <h3>RoutePilot</h3>
+                </div>
+                <a class="circle-link" href="https://github.com/Battleplus/RoutePilot" target="_blank" rel="noreferrer" aria-label="查看 RoutePilot GitHub 仓库">↗</a>
+              </div>
+              <p class="project-lead">
+                面向真实旅行决策的 AI 助手，把提问、方案生成、预算调整、路线比较、冲突检测与导出分享串成完整体验。
+              </p>
+              <div class="project-details">
+                <div>
+                  <span class="detail-label">核心能力</span>
+                  <p>150+ 城市探索、本地 POI 与 UGC 证据、动态重规划、真实路线与多方案对比。</p>
+                </div>
+                <div>
+                  <span class="detail-label">技术栈</span>
+                  <ul class="tags" aria-label="RoutePilot 技术栈">
+                    <li>Next.js 16</li><li>FastAPI</li><li>LangGraph</li><li>PostgreSQL</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="project-art route-art" aria-hidden="true">
+              <div class="map-grid"></div>
+              <svg viewBox="0 0 320 220" role="presentation">
+                <path d="M22 172 C78 164, 76 74, 132 87 S206 180, 296 42" />
+                <circle cx="22" cy="172" r="7" /><circle cx="132" cy="87" r="7" /><circle cx="296" cy="42" r="7" />
+              </svg>
+              <span class="art-caption">PLAN / COMPARE / ADAPT</span>
+            </div>
           </article>
 
-          <article class="post" data-title="QuantPilot 量化分析 Agent" data-tags="AI Agent Quant TypeScript Python">
-            <div class="post-topline">
-              <span class="date">2026-06-01</span>
-              <span class="post-type">Project</span>
-            </div>
-            <h2>
-              <a href="https://github.com/Battleplus/QuantPilot" target="_blank" rel="noreferrer">
-                QuantPilot：面向量化投研的 AI 工作台
-              </a>
-            </h2>
-            <ul class="tag">
-              <li><a href="#projects">Quant</a></li>
-              <li><a href="#projects">Agent Workspace</a></li>
-              <li><a href="#projects">TypeScript</a></li>
-              <li><a href="#projects">Python</a></li>
-            </ul>
-            <div class="entry">
-              <p>
-                QuantPilot 是面向量化投研、金融数据分析和可视化看板生成的 AI 工作台。用户用自然语言发起分析任务，Agent 负责澄清、规划、取数、生成工作空间、执行验证，并沉淀可追踪的产物与评测记录。
+          <article class="project-card project-quant reveal" data-search="QuantPilot 量化分析 AI Agent 策略 回测 数据 评测 FastAPI TimescaleDB">
+            <div class="project-index">02</div>
+            <div class="project-main">
+              <div class="project-title-row">
+                <div>
+                  <p class="project-type">AI QUANT WORKBENCH</p>
+                  <h3>QuantPilot</h3>
+                </div>
+                <a class="circle-link" href="https://github.com/Battleplus/QuantPilot" target="_blank" rel="noreferrer" aria-label="查看 QuantPilot GitHub 仓库">↗</a>
+              </div>
+              <p class="project-lead">
+                面向量化投研的 AI 工作台，让自然语言任务进入可追踪的研究、策略、回测与评测链路。
               </p>
+              <div class="project-details">
+                <div>
+                  <span class="detail-label">核心能力</span>
+                  <p>行情与财务数据、策略平台、Skills 能力层、工作空间观测，以及生成后的自动验证与修复。</p>
+                </div>
+                <div>
+                  <span class="detail-label">技术栈</span>
+                  <ul class="tags" aria-label="QuantPilot 技术栈">
+                    <li>React 19</li><li>Python</li><li>FastAPI</li><li>TimescaleDB</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <a class="read-more" href="https://github.com/Battleplus/QuantPilot" target="_blank" rel="noreferrer">
-              Read More
-            </a>
+            <div class="project-art quant-art" aria-hidden="true">
+              <div class="chart-bars">
+                <i style="--h:38%"></i><i style="--h:58%"></i><i style="--h:45%"></i><i style="--h:76%"></i><i style="--h:63%"></i><i style="--h:92%"></i><i style="--h:81%"></i>
+              </div>
+              <svg viewBox="0 0 320 220" role="presentation"><path d="M12 178 L58 145 L100 158 L144 102 L188 119 L228 70 L274 87 L310 32" /></svg>
+              <span class="art-caption">RESEARCH / TEST / VERIFY</span>
+            </div>
           </article>
 
-          <article class="post" data-title="Mamoji 记账软件 财务产品" data-tags="Finance App TypeScript Java CSS">
-            <div class="post-topline">
-              <span class="date">2026-06-17</span>
-              <span class="post-type">Product</span>
-            </div>
-            <h2>
-              <a href="https://github.com/Battleplus/Mamoji" target="_blank" rel="noreferrer">
-                Mamoji：个人记账产品实践
-              </a>
-            </h2>
-            <ul class="tag">
-              <li><a href="#projects">Finance</a></li>
-              <li><a href="#projects">Product</a></li>
-              <li><a href="#projects">TypeScript</a></li>
-              <li><a href="#projects">Java</a></li>
-            </ul>
-            <div class="entry">
-              <p>
-                Mamoji 是记账软件项目，关注个人财务记录、账目管理与日常消费数据沉淀。它适合展示移动端产品理解、财务场景建模以及前后端协作实现。
+          <article class="project-card project-mamoji reveal" data-search="Mamoji 企业经营 管理系统 财务 HR 税务 预算 Spring Boot Next.js PostgreSQL">
+            <div class="project-index">03</div>
+            <div class="project-main">
+              <div class="project-title-row">
+                <div>
+                  <p class="project-type">BUSINESS OPERATIONS SYSTEM</p>
+                  <h3>Mamoji</h3>
+                </div>
+                <a class="circle-link" href="https://github.com/Battleplus/Mamoji" target="_blank" rel="noreferrer" aria-label="查看 Mamoji GitHub 仓库">↗</a>
+              </div>
+              <p class="project-lead">
+                面向初创公司和小团队的轻量经营管理系统，把财务、人事、税务、票据和运营风险放在同一个工作台。
               </p>
+              <div class="project-details">
+                <div>
+                  <span class="detail-label">核心能力</span>
+                  <p>经营报表、预算与现金流、薪酬月结、税务合规、票据归档、权限审计和生产运维。</p>
+                </div>
+                <div>
+                  <span class="detail-label">技术栈</span>
+                  <ul class="tags" aria-label="Mamoji 技术栈">
+                    <li>Next.js 16</li><li>Spring Boot 4</li><li>PostgreSQL</li><li>Docker</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <a class="read-more" href="https://github.com/Battleplus/Mamoji" target="_blank" rel="noreferrer">
-              Read More
-            </a>
+            <div class="project-art mamoji-art" aria-hidden="true">
+              <div class="metric-card metric-a"><span>现金流</span><strong>+24.8%</strong></div>
+              <div class="metric-card metric-b"><span>预算健康度</span><strong>86</strong></div>
+              <div class="metric-ring"></div>
+              <span class="art-caption">SEE / CONTROL / GROW</span>
+            </div>
           </article>
+        </div>
+      </section>
 
-          <article class="post" id="about" data-title="关于 Battleplus" data-tags="About Full-stack AI Product">
-            <div class="post-topline">
-              <span class="date">2026-06-28</span>
-              <span class="post-type">About</span>
-            </div>
-            <h2>
-              <a href="#about">关于 Battleplus</a>
-            </h2>
-            <ul class="tag">
-              <li><a href="#about">About</a></li>
-              <li><a href="#about">Full-stack</a></li>
-              <li><a href="#about">AI Product</a></li>
-            </ul>
-            <div class="entry">
-              <p>
-                我关注 AI 应用从想法到产品的完整链路：任务入口、模型运行时、数据接口、工程验证、可视化呈现和长期迭代。这个主页用于记录公开项目、技术文章和阶段性作品。
-              </p>
-            </div>
-            <a class="read-more" href="https://github.com/Battleplus" target="_blank" rel="noreferrer">
-              GitHub Profile
-            </a>
-          </article>
-        </section>
-      </main>
-    </div>
+      <section class="approach section-shell" id="approach">
+        <div class="section-heading reveal">
+          <div><p class="kicker">HOW I BUILD</p><h2>从想法到可信交付</h2></div>
+          <p>我更在意完整链路，而不只是一个漂亮的界面或一次性的模型输出。</p>
+        </div>
+        <div class="principles">
+          <article class="principle reveal"><span>01</span><h3>理解真实任务</h3><p>先梳理用户、约束和决策路径，再定义 Agent、数据与界面的边界。</p></article>
+          <article class="principle reveal"><span>02</span><h3>构建可操作结果</h3><p>让输出可继续编辑、比较、追踪和复用，而不是停留在一段答案。</p></article>
+          <article class="principle reveal"><span>03</span><h3>用验证闭环交付</h3><p>把测试、观测、风险提示和失败修复纳入产品本身，持续提高可信度。</p></article>
+        </div>
+      </section>
+
+      <section class="about section-shell" id="about">
+        <div class="about-card reveal">
+          <div class="about-avatar"><img src="assets/avatar.png" alt="Battleplus 的头像" /></div>
+          <div class="about-copy">
+            <p class="kicker">ABOUT BATTLEPLUS</p>
+            <h2>产品思维与工程实现，<br />我希望两者都不妥协。</h2>
+            <p>
+              我持续探索 AI 应用从想法到产品的完整链路：任务入口、模型运行时、数据接口、工程验证、可视化呈现和长期迭代。这里记录公开项目与阶段性作品。
+            </p>
+          </div>
+          <a class="button button-primary" href="https://github.com/Battleplus" target="_blank" rel="noreferrer">在 GitHub 找到我 <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <div class="footer-brand"><span class="brand-mark">B+</span><strong>Battleplus</strong></div>
+      <p>设计与构建于 2026 · 保持好奇，持续交付。</p>
+      <a href="#top">回到顶部 ↑</a>
+    </footer>
 
     <script src="script.js"></script>
   </body>

@@ -1,47 +1,38 @@
 const root = document.documentElement;
 const themeButton = document.querySelector(".theme-toggle");
-const searchInput = document.querySelector("#search-input");
-const results = document.querySelector("#results-container");
-const posts = Array.from(document.querySelectorAll(".post"));
+const themeLabel = document.querySelector(".theme-label");
 
+const systemPrefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
 const savedTheme = localStorage.getItem("battleplus-theme");
-if (savedTheme) {
-  root.dataset.theme = savedTheme;
-  themeButton.textContent = savedTheme === "dark" ? "日间模式" : "夜间模式";
+const initialTheme = savedTheme || (systemPrefersLight ? "light" : "dark");
+
+function setTheme(theme) {
+  root.dataset.theme = theme;
+  if (themeLabel) themeLabel.textContent = theme === "dark" ? "浅色" : "深色";
+  themeButton?.setAttribute("aria-label", `切换到${theme === "dark" ? "浅色" : "深色"}主题`);
 }
+
+setTheme(initialTheme);
 
 themeButton?.addEventListener("click", () => {
   const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
-  root.dataset.theme = nextTheme;
+  setTheme(nextTheme);
   localStorage.setItem("battleplus-theme", nextTheme);
-  themeButton.textContent = nextTheme === "dark" ? "日间模式" : "夜间模式";
 });
 
-function updateSearch(query) {
-  const keyword = query.trim().toLowerCase();
-  results.innerHTML = "";
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
 
-  posts.forEach((post) => {
-    const haystack = `${post.dataset.title || ""} ${post.dataset.tags || ""} ${post.textContent}`.toLowerCase();
-    const matched = !keyword || haystack.includes(keyword);
-    post.classList.toggle("is-hidden", !matched);
-
-    if (keyword && matched) {
-      const title = post.querySelector("h2")?.innerText || "Untitled";
-      const link = post.querySelector("h2 a")?.getAttribute("href") || "#";
-      const item = document.createElement("li");
-      item.innerHTML = `<a href="${link}">${title}</a>`;
-      results.appendChild(item);
-    }
-  });
-
-  if (keyword && !results.children.length) {
-    const item = document.createElement("li");
-    item.textContent = "No results found";
-    results.appendChild(item);
-  }
-}
-
-searchInput?.addEventListener("input", (event) => {
-  updateSearch(event.target.value);
+document.querySelectorAll(".reveal").forEach((element, index) => {
+  element.style.transitionDelay = `${Math.min(index % 3, 2) * 80}ms`;
+  observer.observe(element);
 });
