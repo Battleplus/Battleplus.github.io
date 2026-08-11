@@ -34,8 +34,8 @@
         <span>Battleplus</span>
       </a>
       <nav class="nav" aria-label="主导航">
-        <a href="#projects">精选</a>
-        <a href="#repositories">全部仓库</a>
+        <a href="#projects">全部项目</a>
+        <a href="#repositories">项目速览</a>
         <a href="#approach">方法</a>
         <a href="#about">关于</a>
       </nav>
@@ -71,12 +71,13 @@
           <div class="orbit orbit-two"></div>
           <div class="core-card">
             <span class="core-label">CURRENT FOCUS</span>
-            <strong>AI × Data</strong>
-            <span>从任务理解到可信交付</span>
+            <strong>AI × Systems</strong>
+            <span>从产品、研究到真实系统</span>
           </div>
-          <span class="float-label label-travel">01 / TRAVEL</span>
-          <span class="float-label label-quant">02 / QUANT</span>
-          <span class="float-label label-ops">03 / BUSINESS OPS</span>
+          <span class="float-label label-travel">01 / AI PRODUCT</span>
+          <span class="float-label label-quant">02 / ROBOTICS &amp; RL</span>
+          <span class="float-label label-ops">03 / QUANT RESEARCH</span>
+          <span class="float-label label-lab">04 / EXPERIMENTS</span>
         </div>
 
         <div class="hero-meta reveal">
@@ -89,116 +90,169 @@
       <section class="projects section-shell" id="projects">
         <div class="section-heading reveal">
           <div>
-            <p class="kicker">SELECTED WORK / 2026</p>
-            <h2>代表产品</h2>
+            <p class="kicker">ALL WORK / 14 PROJECTS</p>
+            <h2>全部项目</h2>
           </div>
-          <p>从 14 个公开仓库中选出的三项完整产品实践；全部研究与实验项目见下方仓库索引。</p>
+          <p>不是三个代表作和一串仓库名称，而是 14 份正式介绍。产品、研究、训练成果和孵化项目，都按真实状态完整呈现。</p>
         </div>
 
         <div class="project-list">
-          <article class="project-card project-route reveal" data-search="RoutePilot 旅行规划 AI Agent POI UGC 路线 Next.js FastAPI LangGraph">
+          <article class="project-card project-uav reveal">
             <div class="project-index">01</div>
             <div class="project-main">
               <div class="project-title-row">
-                <div>
-                  <p class="project-type">AI TRAVEL DECISION AGENT</p>
-                  <h3>RoutePilot</h3>
-                </div>
-                <a class="circle-link" href="https://github.com/Battleplus/RoutePilot" target="_blank" rel="noreferrer" aria-label="查看 RoutePilot GitHub 仓库">↗</a>
+                <div><p class="project-type">UAV SIMULATION · 孵化中</p><h3>Clean UAV Simulation</h3></div>
+                <a class="circle-link" href="https://github.com/Battleplus/clean-UAV-simulation" target="_blank" rel="noreferrer" aria-label="查看 Clean UAV Simulation GitHub 仓库">↗</a>
               </div>
-              <p class="project-lead">
-                面向真实旅行决策的 AI 助手，把提问、方案生成、预算调整、路线比较、冲突检测与导出分享串成完整体验。
-              </p>
+              <p class="project-lead">为无人机控制与强化学习实验准备一套干净、可复现的仿真起点，承接后续环境、控制器与训练基线。</p>
               <div class="project-details">
-                <div>
-                  <span class="detail-label">核心能力</span>
-                  <p>150+ 城市探索、本地 POI 与 UGC 证据、动态重规划、真实路线与多方案对比。</p>
-                </div>
-                <div>
-                  <span class="detail-label">技术栈</span>
-                  <ul class="tags" aria-label="RoutePilot 技术栈">
-                    <li>Next.js 16</li><li>FastAPI</li><li>LangGraph</li><li>PostgreSQL</li>
-                  </ul>
-                </div>
+                <div><span class="detail-label">项目方向</span><p>无人机仿真、飞行控制与强化学习环境。</p></div>
+                <div><span class="detail-label">技术与状态</span><ul class="tags"><li>Python</li><li>Simulation</li><li>Incubating</li></ul></div>
               </div>
             </div>
-            <div class="project-art route-art" aria-hidden="true">
-              <div class="map-grid"></div>
-              <svg viewBox="0 0 320 220" role="presentation">
-                <path d="M22 172 C78 164, 76 74, 132 87 S206 180, 296 42" />
-                <circle cx="22" cy="172" r="7" /><circle cx="132" cy="87" r="7" /><circle cx="296" cy="42" r="7" />
-              </svg>
-              <span class="art-caption">PLAN / COMPARE / ADAPT</span>
-            </div>
+            <div class="project-art uav-art" aria-hidden="true"><div class="radar-ring"></div><strong>UAV</strong><span class="art-caption">SIMULATE / CONTROL / LEARN</span></div>
           </article>
 
-          <article class="project-card project-quant reveal" data-search="QuantPilot 量化分析 AI Agent 策略 回测 数据 评测 FastAPI TimescaleDB">
+          <article class="project-card project-gppo reveal">
             <div class="project-index">02</div>
             <div class="project-main">
               <div class="project-title-row">
-                <div>
-                  <p class="project-type">AI QUANT WORKBENCH</p>
-                  <h3>QuantPilot</h3>
-                </div>
-                <a class="circle-link" href="https://github.com/Battleplus/QuantPilot" target="_blank" rel="noreferrer" aria-label="查看 QuantPilot GitHub 仓库">↗</a>
+                <div><p class="project-type">GRAPH REINFORCEMENT LEARNING · 研究</p><h3>GPPO</h3></div>
+                <a class="circle-link" href="https://github.com/Battleplus/GPPO" target="_blank" rel="noreferrer" aria-label="查看 GPPO GitHub 仓库">↗</a>
               </div>
-              <p class="project-lead">
-                面向量化投研的 AI 工作台，让自然语言任务进入可追踪的研究、策略、回测与评测链路。
-              </p>
+              <p class="project-lead">面向弱通信条件下的多无人机动态任务分配，探索事件触发的图 PPO 方法与多智能体协同基线。</p>
               <div class="project-details">
-                <div>
-                  <span class="detail-label">核心能力</span>
-                  <p>行情与财务数据、策略平台、Skills 能力层、工作空间观测，以及生成后的自动验证与修复。</p>
-                </div>
-                <div>
-                  <span class="detail-label">技术栈</span>
-                  <ul class="tags" aria-label="QuantPilot 技术栈">
-                    <li>React 19</li><li>Python</li><li>FastAPI</li><li>TimescaleDB</li>
-                  </ul>
-                </div>
+                <div><span class="detail-label">核心问题</span><p>多智能体协同、通信约束、动态任务分配与策略稳定性。</p></div>
+                <div><span class="detail-label">技术栈</span><ul class="tags"><li>Python</li><li>Graph PPO</li><li>Multi-Agent RL</li></ul></div>
               </div>
             </div>
-            <div class="project-art quant-art" aria-hidden="true">
-              <div class="chart-bars">
-                <i style="--h:38%"></i><i style="--h:58%"></i><i style="--h:45%"></i><i style="--h:76%"></i><i style="--h:63%"></i><i style="--h:92%"></i><i style="--h:81%"></i>
-              </div>
-              <svg viewBox="0 0 320 220" role="presentation"><path d="M12 178 L58 145 L100 158 L144 102 L188 119 L228 70 L274 87 L310 32" /></svg>
-              <span class="art-caption">RESEARCH / TEST / VERIFY</span>
-            </div>
+            <div class="project-art gppo-art" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="art-caption">GRAPH / COORDINATE / OPTIMIZE</span></div>
           </article>
 
-          <article class="project-card project-mamoji reveal" data-search="Mamoji 企业经营 管理系统 财务 HR 税务 预算 Spring Boot Next.js PostgreSQL">
+          <article class="project-card project-cat reveal">
             <div class="project-index">03</div>
             <div class="project-main">
               <div class="project-title-row">
-                <div>
-                  <p class="project-type">BUSINESS OPERATIONS SYSTEM</p>
-                  <h3>Mamoji</h3>
-                </div>
-                <a class="circle-link" href="https://github.com/Battleplus/Mamoji" target="_blank" rel="noreferrer" aria-label="查看 Mamoji GitHub 仓库">↗</a>
+                <div><p class="project-type">AI ADOPTION ASSISTANT · 产品原型</p><h3>CatMatch</h3></div>
+                <a class="circle-link" href="https://github.com/Battleplus/Cathelp" target="_blank" rel="noreferrer" aria-label="查看 CatMatch GitHub 仓库">↗</a>
               </div>
-              <p class="project-lead">
-                面向初创公司和小团队的轻量经营管理系统，把财务、人事、税务、票据和运营风险放在同一个工作台。
-              </p>
+              <p class="project-lead">帮助个人猫咪救助者完成领养评估、交接与首月照护，让领养匹配拥有更可靠、更可持续的流程。</p>
               <div class="project-details">
-                <div>
-                  <span class="detail-label">核心能力</span>
-                  <p>经营报表、预算与现金流、薪酬月结、税务合规、票据归档、权限审计和生产运维。</p>
-                </div>
-                <div>
-                  <span class="detail-label">技术栈</span>
-                  <ul class="tags" aria-label="Mamoji 技术栈">
-                    <li>Next.js 16</li><li>Spring Boot 4</li><li>PostgreSQL</li><li>Docker</li>
-                  </ul>
-                </div>
+                <div><span class="detail-label">核心能力</span><p>领养匹配、家庭与猫咪评估、风险提示、交接清单与照护陪伴。</p></div>
+                <div><span class="detail-label">技术栈</span><ul class="tags"><li>FastAPI</li><li>Taro / React</li><li>AI Workflow</li></ul></div>
               </div>
             </div>
-            <div class="project-art mamoji-art" aria-hidden="true">
-              <div class="metric-card metric-a"><span>现金流</span><strong>+24.8%</strong></div>
-              <div class="metric-card metric-b"><span>预算健康度</span><strong>86</strong></div>
-              <div class="metric-ring"></div>
-              <span class="art-caption">SEE / CONTROL / GROW</span>
+            <div class="project-art cat-art" aria-hidden="true"><strong>CAT<br />MATCH</strong><span class="cat-heart">♥</span><span class="art-caption">ASSESS / MATCH / CARE</span></div>
+          </article>
+
+          <article class="project-card project-untitled reveal">
+            <div class="project-index">04</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">UNTITLED EXPERIMENT · 未初始化</p><h3>Untitled Lab</h3></div><a class="circle-link" href="https://github.com/Battleplus/-" target="_blank" rel="noreferrer" aria-label="查看未命名仓库">↗</a></div>
+              <p class="project-lead">一个尚未命名与初始化的公开实验位。这里保留真实状态，也为下一次技术探索留下明确入口。</p>
+              <div class="project-details"><div><span class="detail-label">项目方向</span><p>待定义的新实验与技术验证。</p></div><div><span class="detail-label">当前状态</span><ul class="tags"><li>Open Slot</li><li>Uninitialized</li></ul></div></div>
             </div>
+            <div class="project-art untitled-art" aria-hidden="true"><strong>—</strong><span class="art-caption">NEXT EXPERIMENT / TBD</span></div>
+          </article>
+
+          <article class="project-card project-shiyu reveal">
+            <div class="project-index">05</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">AI EXPRESSION COMPANION · 产品设计</p><h3>拾语 SHIYU</h3></div><a class="circle-link" href="https://github.com/Battleplus/-SHIYU-Find-Your-Words-One-Question-at-a-Time." target="_blank" rel="noreferrer" aria-label="查看拾语 GitHub 仓库">↗</a></div>
+              <p class="project-lead">通过一次只问一个问题的 AI 引导，帮助用户观察感受、找到语言，并逐步练习自主表达。</p>
+              <div class="project-details"><div><span class="detail-label">核心体验</span><p>启发式单问题对话、情绪觉察、语言组织与表达练习。</p></div><div><span class="detail-label">技术方向</span><ul class="tags"><li>HarmonyOS</li><li>AI UX</li><li>Conversation</li></ul></div></div>
+            </div>
+            <div class="project-art shiyu-art" aria-hidden="true"><span>感受</span><strong>拾语</strong><span>表达</span><span class="art-caption">FEEL / FIND / EXPRESS</span></div>
+          </article>
+
+          <article class="project-card project-g1 reveal">
+            <div class="project-index">06</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">HUMANOID LOCOMOTION · 训练成果</p><h3>G1 Gait Training</h3></div><a class="circle-link" href="https://github.com/Battleplus/test1" target="_blank" rel="noreferrer" aria-label="查看 G1 Gait Training GitHub 仓库">↗</a></div>
+              <p class="project-lead">训练 Unitree G1 29 自由度人形机器人进行速度跟踪，记录步态策略、训练配置与检查点成果。</p>
+              <div class="project-details"><div><span class="detail-label">研究目标</span><p>稳定步态、速度跟踪、人形机器人运动控制与策略验证。</p></div><div><span class="detail-label">技术栈</span><ul class="tags"><li>PPO</li><li>RSL-RL</li><li>Isaac Lab</li></ul></div></div>
+            </div>
+            <div class="project-art gait-art" aria-hidden="true"><div class="gait-bars"><i></i><i></i><i></i><i></i><i></i></div><span class="art-caption">TRAIN / WALK / STABILIZE</span></div>
+          </article>
+
+          <article class="project-card project-isaac reveal">
+            <div class="project-index">07</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">ROBOT LEARNING WORKSPACE · 实验框架</p><h3>Isaac Lab Workspace</h3></div><a class="circle-link" href="https://github.com/Battleplus/test" target="_blank" rel="noreferrer" aria-label="查看 Isaac Lab Workspace GitHub 仓库">↗</a></div>
+              <p class="project-lead">围绕 NVIDIA Isaac Lab 组织机器人学习、环境配置、物理仿真与训练实验的工程工作区。</p>
+              <div class="project-details"><div><span class="detail-label">核心能力</span><p>训练环境搭建、机器人任务配置、物理仿真与实验复现。</p></div><div><span class="detail-label">技术栈</span><ul class="tags"><li>Python</li><li>Isaac Sim</li><li>Isaac Lab</li></ul></div></div>
+            </div>
+            <div class="project-art isaac-art" aria-hidden="true"><div class="lab-cube"><span>SIM</span><strong>LAB</strong></div><span class="art-caption">CONFIGURE / SIMULATE / TRAIN</span></div>
+          </article>
+
+          <article class="project-card project-unitree reveal">
+            <div class="project-index">08</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">UNITREE ROBOT RL · 机器人实验</p><h3>Unitree</h3></div><a class="circle-link" href="https://github.com/Battleplus/unitree" target="_blank" rel="noreferrer" aria-label="查看 Unitree GitHub 仓库">↗</a></div>
+              <p class="project-lead">整理 Unitree RL Lab 环境、Go2 训练脚本、演示程序与运行手册，形成机器人强化学习实验入口。</p>
+              <div class="project-details"><div><span class="detail-label">项目内容</span><p>四足机器人训练、策略运行、Notebook 实验与环境说明。</p></div><div><span class="detail-label">技术栈</span><ul class="tags"><li>Jupyter</li><li>Python</li><li>Robot RL</li></ul></div></div>
+            </div>
+            <div class="project-art unitree-art" aria-hidden="true"><strong>U</strong><span>RL LAB</span><span class="art-caption">ROBOT / POLICY / MOTION</span></div>
+          </article>
+
+          <article class="project-card project-arm reveal">
+            <div class="project-index">09</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">ROBOTIC ARM · 早期方向</p><h3>Arm</h3></div><a class="circle-link" href="https://github.com/Battleplus/arm" target="_blank" rel="noreferrer" aria-label="查看 Arm GitHub 仓库">↗</a></div>
+              <p class="project-lead">机械臂控制与学习方向的早期项目入口，为任务规划、抓取、操作学习和控制实验预留空间。</p>
+              <div class="project-details"><div><span class="detail-label">项目方向</span><p>机械臂控制、任务规划、抓取与操作学习。</p></div><div><span class="detail-label">当前状态</span><ul class="tags"><li>Robotic Arm</li><li>Early Stage</li></ul></div></div>
+            </div>
+            <div class="project-art arm-art" aria-hidden="true"><div class="arm-shape"><i></i><i></i><i></i></div><span class="art-caption">PLAN / REACH / MANIPULATE</span></div>
+          </article>
+
+          <article class="project-card project-flow reveal">
+            <div class="project-index">10</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">MARKET SIGNAL ANALYSIS · 量化工具</p><h3>Flow-K</h3></div><a class="circle-link" href="https://github.com/Battleplus/flow-K" target="_blank" rel="noreferrer" aria-label="查看 Flow-K GitHub 仓库">↗</a></div>
+              <p class="project-lead">从 K 线趋势、斜率与形态中提取信号，并把信号组合和交易策略放入可重复的回测过程。</p>
+              <div class="project-details"><div><span class="detail-label">核心能力</span><p>趋势识别、形态与斜率分析、多类信号组合及策略回测。</p></div><div><span class="detail-label">技术栈</span><ul class="tags"><li>Python</li><li>Flask</li><li>yfinance</li></ul></div></div>
+            </div>
+            <div class="project-art flow-art" aria-hidden="true"><div class="flow-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="flow-line"></span><span class="art-caption">SIGNAL / STRATEGY / BACKTEST</span></div>
+          </article>
+
+          <article class="project-card project-web reveal">
+            <div class="project-index">11</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">PORTFOLIO SYSTEM · 持续上线</p><h3>Battleplus.github.io</h3></div><a class="circle-link" href="https://github.com/Battleplus/Battleplus.github.io" target="_blank" rel="noreferrer" aria-label="查看主页 GitHub 仓库">↗</a></div>
+              <p class="project-lead">当前个人主页本身也是一项持续迭代的产品：用清晰的信息架构组织 14 个项目、研究方向与工程能力。</p>
+              <div class="project-details"><div><span class="detail-label">设计目标</span><p>中文技术叙事、项目导航、响应式体验与个人识别系统。</p></div><div><span class="detail-label">技术栈</span><ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul></div></div>
+            </div>
+            <div class="project-art web-art" aria-hidden="true"><span>BATTLE</span><strong>PLUS</strong><small>14 PROJECTS</small><span class="art-caption">DESIGN / BUILD / PUBLISH</span></div>
+          </article>
+
+          <article class="project-card project-route reveal">
+            <div class="project-index">12</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">AI TRAVEL DECISION AGENT · AI 产品</p><h3>RoutePilot</h3></div><a class="circle-link" href="https://github.com/Battleplus/RoutePilot" target="_blank" rel="noreferrer" aria-label="查看 RoutePilot GitHub 仓库">↗</a></div>
+              <p class="project-lead">面向真实旅行决策的 AI 助手，把提问、方案生成、预算调整、路线比较、冲突检测与导出分享串成完整体验。</p>
+              <div class="project-details"><div><span class="detail-label">核心能力</span><p>150+ 城市探索、本地 POI 与 UGC 证据、动态重规划和真实路线对比。</p></div><div><span class="detail-label">技术栈</span><ul class="tags"><li>Next.js 16</li><li>FastAPI</li><li>LangGraph</li><li>PostgreSQL</li></ul></div></div>
+            </div>
+            <div class="project-art route-art" aria-hidden="true"><div class="map-grid"></div><div class="route-path"><i></i><i></i><i></i></div><span class="art-caption">PLAN / COMPARE / ADAPT</span></div>
+          </article>
+
+          <article class="project-card project-mamoji reveal">
+            <div class="project-index">13</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">BUSINESS OPERATIONS SYSTEM · 企业产品</p><h3>Mamoji</h3></div><a class="circle-link" href="https://github.com/Battleplus/Mamoji" target="_blank" rel="noreferrer" aria-label="查看 Mamoji GitHub 仓库">↗</a></div>
+              <p class="project-lead">面向初创公司和小团队的轻量经营管理系统，把财务、人事、税务、票据和运营风险放在同一个工作台。</p>
+              <div class="project-details"><div><span class="detail-label">核心能力</span><p>经营报表、预算与现金流、薪酬月结、税务合规、票据归档与权限审计。</p></div><div><span class="detail-label">技术栈</span><ul class="tags"><li>Next.js 16</li><li>Spring Boot 4</li><li>PostgreSQL</li><li>Docker</li></ul></div></div>
+            </div>
+            <div class="project-art mamoji-art" aria-hidden="true"><div class="metric-card metric-a"><span>现金流</span><strong>+24.8%</strong></div><div class="metric-card metric-b"><span>预算健康度</span><strong>86</strong></div><div class="metric-ring"></div><span class="art-caption">SEE / CONTROL / GROW</span></div>
+          </article>
+
+          <article class="project-card project-quant reveal">
+            <div class="project-index">14</div>
+            <div class="project-main">
+              <div class="project-title-row"><div><p class="project-type">AI QUANT WORKBENCH · AI 产品</p><h3>QuantPilot</h3></div><a class="circle-link" href="https://github.com/Battleplus/QuantPilot" target="_blank" rel="noreferrer" aria-label="查看 QuantPilot GitHub 仓库">↗</a></div>
+              <p class="project-lead">面向量化投研的 AI 工作台，让自然语言任务进入可追踪的研究、策略、回测、评测与自动修复链路。</p>
+              <div class="project-details"><div><span class="detail-label">核心能力</span><p>行情与财务数据、策略平台、Skills 能力层、工作空间观测和结果验证。</p></div><div><span class="detail-label">技术栈</span><ul class="tags"><li>React 19</li><li>Python</li><li>FastAPI</li><li>TimescaleDB</li></ul></div></div>
+            </div>
+            <div class="project-art quant-art" aria-hidden="true"><div class="chart-bars"><i style="--h:38%"></i><i style="--h:58%"></i><i style="--h:45%"></i><i style="--h:76%"></i><i style="--h:63%"></i><i style="--h:92%"></i><i style="--h:81%"></i></div><div class="quant-line"></div><span class="art-caption">RESEARCH / TEST / VERIFY</span></div>
           </article>
         </div>
       </section>
@@ -206,10 +260,10 @@
       <section class="repositories section-shell" id="repositories">
         <div class="section-heading reveal">
           <div>
-            <p class="kicker">ALL REPOSITORIES / 14</p>
-            <h2>全部公开仓库</h2>
+            <p class="kicker">QUICK INDEX / 14</p>
+            <h2>项目速览</h2>
           </div>
-          <p>按 GitHub 最近更新时间整理，覆盖 AI 产品、强化学习、机器人仿真、量化分析与工程实验。</p>
+          <p>已经读过完整介绍？这里提供 14 个 GitHub 仓库的快速入口，方便直接进入代码和文档。</p>
         </div>
 
         <div class="repo-grid">
