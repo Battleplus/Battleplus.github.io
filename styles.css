@@ -100,7 +100,7 @@ button { font: inherit; }
 .hero-meta span { color: var(--lime); font-size: 25px; font-weight: 800; }
 .hero-meta small { color: var(--muted); font-size: 11px; }
 
-.projects, .approach, .about { padding: 112px 0; border-bottom: 1px solid var(--line); }
+.projects, .repositories, .approach, .about { padding: 112px 0; border-bottom: 1px solid var(--line); }
 .section-heading { display: grid; grid-template-columns: 1.5fr .75fr; gap: 50px; align-items: end; margin-bottom: 58px; }
 .section-heading .kicker { margin-bottom: 17px; }
 .section-heading h2, .about h2 { margin: 0; font-size: clamp(2.3rem, 4.7vw, 4.5rem); line-height: 1.02; letter-spacing: -.06em; }
@@ -137,6 +137,18 @@ button { font: inherit; }
 .metric-a { top: 40px; left: 28px; }.metric-b { right: 24px; bottom: 58px; }
 .metric-ring { position: absolute; top: 62px; right: 38px; width: 118px; height: 118px; border: 17px solid rgba(255,107,53,.16); border-top-color: var(--orange); border-right-color: var(--orange); border-radius: 50%; transform: rotate(20deg); }
 
+.repo-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.repo-tile { position: relative; display: flex; flex-direction: column; min-height: 270px; padding: 26px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: transparent; transition: background 180ms ease, transform 180ms ease; }
+.repo-tile:hover { z-index: 2; background: var(--surface); transform: translateY(-3px); }
+.repo-tile.repo-featured::after { content: ""; position: absolute; top: 0; right: 0; width: 38px; height: 3px; background: var(--lime); }
+.repo-number { color: var(--muted); font-family: "DM Mono", monospace; font-size: 10px; }
+.repo-status { position: absolute; top: 22px; right: 23px; padding: 4px 7px; border: 1px solid var(--line); border-radius: 999px; font-family: "DM Mono", monospace; font-size: 8px; letter-spacing: .08em; }
+.status-product { border-color: rgba(200,255,56,.3); color: var(--lime); }.status-research { border-color: rgba(109,140,255,.38); color: #91a5ff; }.status-lab { color: #dfb0ff; }.status-empty { color: var(--muted); }
+.repo-tile h3 { max-width: 88%; margin: 48px 0 12px; overflow-wrap: anywhere; font-size: clamp(1.35rem, 2.4vw, 2rem); line-height: 1.05; letter-spacing: -.05em; }
+.repo-tile > p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+.repo-meta { display: flex; align-items: center; gap: 7px; margin-top: auto; padding-top: 24px; color: var(--muted); font-family: "DM Mono", monospace; font-size: 9px; }
+.repo-meta span { padding: 4px 6px; border: 1px solid var(--line); }.repo-meta b { margin-left: auto; color: var(--text); font-size: 16px; }
+
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .principle { min-height: 280px; padding: 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .principle span { color: var(--lime); font-family: "DM Mono", monospace; font-size: 11px; }
@@ -169,11 +181,14 @@ button { font: inherit; }
   .section-shell, .site-header { width: min(100% - 28px, var(--max)); }
   .site-header { grid-template-columns: 1fr auto; min-height: 72px; }.nav { display: none; }.theme-label { display: none; }.theme-toggle { width: 38px; padding: 0; justify-content: center; }.github-link { padding-inline: 12px; }
   .hero { min-height: auto; padding: 76px 0 36px; }.hero h1 { font-size: clamp(3.25rem, 16vw, 5.5rem); }.hero-intro { font-size: 16px; }
-  .hero-visual { width: 100%; min-height: 400px; }.orbit-one { width: min(330px, 91vw); height: min(330px, 91vw); }.orbit-two { width: min(238px, 66vw); height: min(238px, 66vw); }.core-card { width: 190px; height: 190px; padding: 22px; }.label-travel { left: 0; }.label-quant { right: 0; }.label-ops { left: 2%; }
+  .hero-visual { width: 100%; min-height: 400px; overflow: hidden; contain: layout paint; }.orbit-one { width: min(330px, 91vw); height: min(330px, 91vw); }.orbit-two { width: min(238px, 66vw); height: min(238px, 66vw); }.core-card { width: 190px; height: 190px; padding: 22px; }.label-travel { left: 0; }.label-quant { right: 0; }.label-ops { left: 2%; }
   .hero-meta { justify-content: space-between; gap: 14px; }.hero-meta div { display: flex; flex-direction: column; gap: 1px; }.hero-meta small { max-width: 90px; }
-  .projects, .approach, .about { padding: 78px 0; }.section-heading { grid-template-columns: 1fr; gap: 20px; margin-bottom: 38px; }
+  .projects, .repositories, .approach, .about { padding: 78px 0; }.section-heading { grid-template-columns: 1fr; gap: 20px; margin-bottom: 38px; }
   .project-card { grid-template-columns: 1fr; gap: 18px; padding: 34px 0; }.project-index { padding: 0; }.project-art { grid-column: 1; min-height: 280px; order: 2; }.project-main { order: 1; }.project-details { grid-template-columns: 1fr; gap: 20px; }.project-card h3 { font-size: 3.2rem; }.project-lead { font-size: 15px; }
   .principles { grid-template-columns: 1fr; }.principle { min-height: 220px; }.principle h3 { margin-top: 44px; }
+  .repo-grid { grid-template-columns: 1fr; }.repo-tile { min-height: 230px; }.repo-tile h3 { max-width: 82%; font-size: 1.7rem; }
   .about-card { grid-template-columns: 1fr; gap: 28px; padding: 28px; }.about-card > .button { grid-column: 1; }.about-avatar { width: 90px; height: 90px; }
   .site-footer { grid-template-columns: 1fr auto; gap: 20px; }.site-footer p { display: none; }
 }
+
+@media (min-width: 701px) and (max-width: 980px) { .repo-grid { grid-template-columns: repeat(2, 1fr); } }

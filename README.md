@@ -1,12 +1,14 @@
 # Battleplus.github.io
 
-Battleplus 的个人作品集主页，集中展示 RoutePilot、QuantPilot 和 Mamoji 三个公开项目。
+Battleplus 的个人作品集主页，集中展示 GitHub 账号下的 14 个公开仓库，覆盖 AI 产品、强化学习、机器人仿真与量化研究。
 
-## 项目定位
+## 代表项目
 
 - **RoutePilot**：面向真实旅行决策的 AI Agent。
 - **QuantPilot**：面向量化投研的 AI 工作台。
 - **Mamoji**：面向初创公司和小团队的经营管理系统。
+
+主页同时提供全部公开仓库索引，包括 GPPO、CatMatch、拾语、Flow-K、Unitree 与 Isaac Lab 相关实验。
 
 ## 本地预览
 
